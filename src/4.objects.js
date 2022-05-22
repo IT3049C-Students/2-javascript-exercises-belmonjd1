@@ -9,7 +9,16 @@
  *      * must use the `class_of` property in the introduction
  */
 const personObject = {
-
+  first_name: "Jared",
+  last_name: "Belmont",
+  class_of: 2023,
+  full_name: function() {
+    return this.first_name.concat(" ", this.last_name);
+  },
+  introduction: function() {
+    name = this.full_name();
+    return name.concat(" ", this.class_of);
+  } 
 };
 
 module.exports = {
